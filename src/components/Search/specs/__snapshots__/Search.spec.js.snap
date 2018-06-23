@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders properly 1`] = `
+<styled.div>
+  <styled.h1>
+    Stack Overflow
+  </styled.h1>
+  <styled.form
+    onSubmit={[Function]}
+  >
+    <styled.p>
+      Buscar na API
+    </styled.p>
+    <styled.div>
+      <styled.div>
+        <styled.label>
+           Tag 
+        </styled.label>
+        <styled.input
+          name="tag"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </styled.div>
+      <styled.div>
+        <styled.label>
+           Limit 
+        </styled.label>
+        <styled.input
+          name="limit"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </styled.div>
+      <styled.div>
+        <styled.label>
+           Score 
+        </styled.label>
+        <styled.input
+          name="score"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </styled.div>
+      <styled.div>
+        <styled.label>
+           Sort 
+        </styled.label>
+        <styled.input
+          name="sort"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </styled.div>
+    </styled.div>
+    <styled.div>
+      <styled.button>
+        Buscar
+      </styled.button>
+    </styled.div>
+  </styled.form>
+</styled.div>
+`;
