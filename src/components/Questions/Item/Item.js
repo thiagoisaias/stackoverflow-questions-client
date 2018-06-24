@@ -15,7 +15,7 @@ import {
 } from "./styled";
 
 const Item = props => {
-  const { createdAt, numberOfAnswers, owner, score, tags, title, url } = props;
+  const { createdAt, numberOfAnswers, user, score, tags, title, url } = props;
   return (
     <Wrapper>
       <StatsWrapper>
@@ -37,8 +37,8 @@ const Item = props => {
             {tags && tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
           </TagList>
           <PostedBy>
-            <ProfilePictureThumbnail src={owner && owner.profileImage} />
-            <span>{`Asked ${createdAt} by ${owner && owner.name}`}</span>
+            <ProfilePictureThumbnail src={user && user.profileImage} />
+            <span>{`Asked ${createdAt} by ${user && user.name}`}</span>
           </PostedBy>
         </BottomInfoWrapper>
       </InfoWrapper>
@@ -50,7 +50,7 @@ Item.propTypes = {
   id: PropTypes.number,
   createdAt: PropTypes.string,
   numberOfAnswers: PropTypes.number,
-  owner: PropTypes.shape({
+  user: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
     profileImage: PropTypes.string

@@ -2,7 +2,7 @@ export default {
   items: [
     {
       tags: ["java", "c++", "performance", "optimization", "branch-prediction"],
-      owner: {
+      user: {
         reputation: 285269,
         user_id: 87234,
         user_type: "registered",
@@ -28,7 +28,7 @@ export default {
     },
     {
       tags: ["javascript", "jquery", "redirect"],
-      owner: {
+      user: {
         reputation: 48729,
         user_id: 44984,
         user_type: "registered",
@@ -54,7 +54,7 @@ export default {
     },
     {
       tags: ["javascript", "function", "variables", "scope", "closures"],
-      owner: {
+      user: {
         reputation: 330008,
         user_id: 9951,
         user_type: "registered",
@@ -88,7 +88,7 @@ export default {
         "contains",
         "string-matching"
       ],
-      owner: {
+      user: {
         reputation: 9167,
         user_id: 131679,
         user_type: "registered",
@@ -116,7 +116,7 @@ export default {
     },
     {
       tags: ["javascript", "jquery", "dom", "visibility"],
-      owner: {
+      user: {
         reputation: 52279,
         user_id: 21709,
         user_type: "registered",
@@ -142,7 +142,7 @@ export default {
     },
     {
       tags: ["javascript", "syntax", "jslint", "use-strict"],
-      owner: {
+      user: {
         reputation: 39415,
         user_id: 25847,
         user_type: "registered",

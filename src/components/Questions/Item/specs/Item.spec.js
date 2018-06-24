@@ -8,7 +8,7 @@ describe("Item", () => {
     id: 534,
     createdAt: "12'17",
     numberOfAnswers: 54,
-    owner: {
+    user: {
       id: 234,
       name: "Lorem",
       profileImage: "http://someurl.com"

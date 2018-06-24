@@ -11,7 +11,7 @@ describe("List", () => {
         id: 534,
         createdAt: "12'17",
         numberOfAnswers: 54,
-        owner: {
+        user: {
           id: 234,
           name: "Lorem",
           profileImage: "http://someurl.com"
@@ -25,7 +25,7 @@ describe("List", () => {
         id: 144,
         createdAt: "13'17",
         numberOfAnswers: 59,
-        owner: {
+        user: {
           id: 134,
           name: "Foo",
           profileImage: "http://someurl.com"

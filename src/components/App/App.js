@@ -9,16 +9,16 @@ import questionList from "../../questions";
 
 /* Temporary! */
 const parsedQuestionList = questionList.items.map(question => {
-  const owner = {
-    id: question.owner.user_id,
-    name: question.owner.display_name,
-    profileImage: question.owner.profile_image
+  const user = {
+    id: question.user.user_id,
+    name: question.user.display_name,
+    profileImage: question.user.profile_image
   };
   return {
     id: question.question_id,
     createdAt: moment.unix(question.creation_date).format("MM[']YY"),
     numberOfAnswers: question.answer_count,
-    owner: owner,
+    user: user,
     score: question.score,
     tags: question.tags,
     title: question.title,

@@ -35,7 +35,7 @@ List.propTypes = {
       id: PropTypes.number,
       createdAt: PropTypes.string,
       numberOfAnswers: PropTypes.number,
-      owner: PropTypes.shape({
+      user: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
         profileImage: PropTypes.string
