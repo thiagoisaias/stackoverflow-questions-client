@@ -5,19 +5,21 @@ import Item from "../Item/Item";
 import Spinner from "../../../shared/Spinner/Spinner";
 
 import { EmptyListMessage, Wrapper } from "./styled";
+import { ErrorMessage } from "../../../shared/styled";
 
 const List = props => {
-  const { isLoading, questionList } = props;
+  const { error, isLoading, questionList } = props;
 
   const list = questionList.map(question => {
     return <Item key={question.id} {...question} />;
   });
 
+  if (isLoading) return <Spinner size={36} color={"#777"} />;
+  if (error) return <ErrorMessage>{error}</ErrorMessage>;
+
   return (
     <Wrapper>
-      {isLoading ? (
-        <Spinner size={36} color={"#777"} />
-      ) : list.length === 0 ? (
+      {list.length === 0 ? (
         <EmptyListMessage>
           Nenhum resultado encontrado! Tente alterar os parâmetros de busca.
         </EmptyListMessage>
@@ -29,7 +31,8 @@ const List = props => {
 };
 
 List.propTypes = {
-  isLoading: PropTypes.bool,
+  error: PropTypes.string,
+  isLoading: PropTypes.bool.isRequired,
   questionList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
@@ -45,7 +48,7 @@ List.propTypes = {
       title: PropTypes.string,
       url: PropTypes.string
     })
-  )
+  ).isRequired
 };
 
 export default List;

@@ -5,6 +5,7 @@ import List from "../List";
 
 describe("List", () => {
   const mockProps = {
+    error: null,
     isLoading: false,
     questionList: [
       {
