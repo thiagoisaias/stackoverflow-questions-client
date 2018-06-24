@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <LayoutWrapper>
         <Search />
-        <QuestionList questionList={questionList.items} isLoading={true} />
+        <QuestionList questionList={[]} isLoading={false} />
       </LayoutWrapper>
     );
   }

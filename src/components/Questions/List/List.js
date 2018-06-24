@@ -6,9 +6,7 @@ import PropTypes from "prop-types";
 import Item from "../Item/Item";
 import Spinner from "../../../shared/Spinner/Spinner";
 
-const Wrapper = styled.div`
-  margin: 32px 0;
-`;
+import { EmptyListMessage, Wrapper } from "./styled";
 
 const List = props => {
   const { isLoading, questionList } = props;
@@ -35,7 +33,19 @@ const List = props => {
     );
   });
 
-  return <Wrapper>{ isLoading ? <Spinner size={36} color={"#777"} /> : list}</Wrapper>;
+  return (
+    <Wrapper>
+      {isLoading ? (
+        <Spinner size={36} color={"#777"} />
+      ) : list.length === 0 ? (
+        <EmptyListMessage>
+          Nenhum resultado encontrado! Tente alterar os parâmetros de busca.
+        </EmptyListMessage>
+      ) : (
+        list
+      )}
+    </Wrapper>
+  );
 };
 
 List.propTypes = {
