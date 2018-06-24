@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner renders properly 1`] = `
+<styled.div
+  size={30}
+>
+  <styled.div
+    color="#FFF"
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+  </styled.div>
+</styled.div>
+`;
