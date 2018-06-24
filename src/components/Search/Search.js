@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 import {
   InputGroup,
@@ -13,84 +14,75 @@ import {
   Wrapper
 } from "./styled";
 
-class Search extends Component {
-  constructor(props) {
-    super(props);
+const Search = props => {
+  const { handleInputChange, handleQuerySubmit, queryArgs } = props;
 
-    this.state = {
-      tag: "",
-      limit: "",
-      score: "",
-      sort: ""
-    };
-  }
-
-  handleChange = event => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleSubmit = event => {
+  const handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    console.log(queryArgs);
+    handleQuerySubmit();
   };
 
-  render() {
-    return (
-      <Wrapper>
-        <Title>Stack Overflow</Title>
-        <StyledForm onSubmit={this.handleSubmit}>
-          <Subtitle>Buscar na API</Subtitle>
-          <InputListWrapper>
-            <InputGroup>
-              <StyledLabel> Tag </StyledLabel>
-              <StyledInput
-                type="text"
-                name="tag"
-                onChange={this.handleChange}
-                value={this.state.tag}
-              />
-            </InputGroup>
-            <InputGroup>
-              <StyledLabel> Limit </StyledLabel>
-              <StyledInput
-                type="text"
-                name="limit"
-                onChange={this.handleChange}
-                value={this.state.limit}
-              />
-            </InputGroup>
-            <InputGroup>
-              <StyledLabel> Score </StyledLabel>
-              <StyledInput
-                type="text"
-                name="score"
-                onChange={this.handleChange}
-                value={this.state.score}
-              />
-            </InputGroup>
-            <InputGroup>
-              <StyledLabel> Sort </StyledLabel>
-              <StyledInput
-                type="text"
-                name="sort"
-                onChange={this.handleChange}
-                value={this.state.sort}
-              />
-            </InputGroup>
-          </InputListWrapper>
-          <SubmitButtonWrapper>
-            <SubmitButton>Buscar</SubmitButton>
-          </SubmitButtonWrapper>
-        </StyledForm>
-      </Wrapper>
-    );
-  }
-}
+  return (
+    <Wrapper>
+      <Title>Stack Overflow</Title>
+      <StyledForm onSubmit={handleSubmit}>
+        <Subtitle>Buscar na API</Subtitle>
+        <InputListWrapper>
+          <InputGroup>
+            <StyledLabel> Tags </StyledLabel>
+            <StyledInput
+              type="text"
+              name="tags"
+              onChange={handleInputChange}
+              value={queryArgs.tags}
+            />
+          </InputGroup>
+          <InputGroup>
+            <StyledLabel> Limit </StyledLabel>
+            <StyledInput
+              type="text"
+              name="limit"
+              onChange={handleInputChange}
+              value={queryArgs.limit}
+            />
+          </InputGroup>
+          <InputGroup>
+            <StyledLabel> Score </StyledLabel>
+            <StyledInput
+              type="text"
+              name="score"
+              onChange={handleInputChange}
+              value={queryArgs.score}
+            />
+          </InputGroup>
+          <InputGroup>
+            <StyledLabel> Sort </StyledLabel>
+            <StyledInput
+              type="text"
+              name="sort"
+              onChange={handleInputChange}
+              value={queryArgs.sort}
+            />
+          </InputGroup>
+        </InputListWrapper>
+        <SubmitButtonWrapper>
+          <SubmitButton>Buscar</SubmitButton>
+        </SubmitButtonWrapper>
+      </StyledForm>
+    </Wrapper>
+  );
+};
+
+Search.propTypes = {
+  handleInputChange: PropTypes.func.isRequired,
+  handleQuerySubmit: PropTypes.func.isRequired,
+  queryArgs: PropTypes.shape({
+    tags: PropTypes.string.isRequired,
+    limit: PropTypes.string.isRequired,
+    score: PropTypes.string.isRequired,
+    sort: PropTypes.string.isRequired
+  })
+};
 
 export default Search;

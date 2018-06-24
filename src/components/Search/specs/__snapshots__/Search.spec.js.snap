@@ -14,10 +14,10 @@ exports[`Search renders properly 1`] = `
     <styled.div>
       <styled.div>
         <styled.label>
-           Tag 
+           Tags 
         </styled.label>
         <styled.input
-          name="tag"
+          name="tags"
           onChange={[Function]}
           type="text"
           value=""
