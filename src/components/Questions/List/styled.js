@@ -8,5 +8,5 @@ export const EmptyListMessage = styled.p`
 `;
 
 export const Wrapper = styled.div`
-  margin: 32px 0;
+  margin-bottom: 32px;
 `;

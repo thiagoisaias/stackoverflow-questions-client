@@ -10,3 +10,7 @@ export const LayoutWrapper = styled.div`
     padding: 16px;
   }
 `;
+
+export const ErrorMessage = styled.p`
+  color: salmon;
+`;

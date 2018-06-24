@@ -86,4 +86,6 @@ export const Title = styled.h1`
   }
 `;
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+margin-bottom: 32px;
+`;
