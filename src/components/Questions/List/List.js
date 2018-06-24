@@ -1,6 +1,4 @@
 import React from "react";
-import moment from "moment";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import Item from "../Item/Item";
@@ -12,25 +10,7 @@ const List = props => {
   const { isLoading, questionList } = props;
 
   const list = questionList.map(question => {
-    const owner = {
-      id: question.owner.user_id,
-      name: question.owner.display_name,
-      profileImage: question.owner.profile_image
-    };
-
-    return (
-      <Item
-        key={question.question_id}
-        id={question.question_id}
-        createdAt={moment.unix(question.creation_date).format("MM[']YY")}
-        numberOfAnswers={question.answer_count}
-        owner={owner}
-        score={question.score}
-        tags={question.tags}
-        title={question.title}
-        url={question.link}
-      />
-    );
+    return <Item key={question.id} {...question} />;
   });
 
   return (
