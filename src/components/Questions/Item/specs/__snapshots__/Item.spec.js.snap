@@ -4,13 +4,17 @@ exports[`Item renders properly 1`] = `
 <styled.div>
   <styled.div>
     <styled.div>
-      <span />
+      <span>
+        568
+      </span>
       <span>
         score
       </span>
     </styled.div>
     <styled.div>
-      <span />
+      <span>
+        54
+      </span>
       <span>
         answers
       </span>
@@ -18,17 +22,33 @@ exports[`Item renders properly 1`] = `
   </styled.div>
   <styled.div>
     <a
+      href="http://thisisanurl.com"
       rel="noopener"
       target="_blank"
     >
-      <styled.p />
+      <styled.p>
+        This is an example!
+      </styled.p>
     </a>
     <styled.div>
-      <styled.div />
+      <styled.div>
+        <styled.div
+          key="tag1"
+        >
+          tag1
+        </styled.div>
+        <styled.div
+          key="tag2"
+        >
+          tag2
+        </styled.div>
+      </styled.div>
       <styled.span>
-        <styled.img />
+        <styled.img
+          src="http://someurl.com"
+        />
         <span>
-          Asked undefined by undefined
+          Asked 12'17 by Lorem
         </span>
       </styled.span>
     </styled.div>

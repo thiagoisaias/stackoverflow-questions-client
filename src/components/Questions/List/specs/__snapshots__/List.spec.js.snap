@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders properly 1`] = `
+<styled.div>
+  <Item
+    createdAt="12'17"
+    id={534}
+    key="534"
+    numberOfAnswers={54}
+    owner={
+      Object {
+        "id": 234,
+        "name": "Lorem",
+        "profileImage": "http://someurl.com",
+      }
+    }
+    score={568}
+    tags={
+      Array [
+        "tag1",
+        "tag2",
+      ]
+    }
+    title="This is an example!"
+    url="http://thisisanurl.com"
+  />
+  <Item
+    createdAt="13'17"
+    id={144}
+    key="144"
+    numberOfAnswers={59}
+    owner={
+      Object {
+        "id": 134,
+        "name": "Foo",
+        "profileImage": "http://someurl.com",
+      }
+    }
+    score={968}
+    tags={
+      Array [
+        "tag3",
+        "tag4",
+      ]
+    }
+    title="This is another example!"
+    url="http://thisisanurl.com"
+  />
+</styled.div>
+`;
