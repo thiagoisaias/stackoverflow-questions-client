@@ -30,7 +30,7 @@ exports[`Search renders properly 1`] = `
         <styled.input
           name="limit"
           onChange={[Function]}
-          type="text"
+          type="number"
           value=""
         />
       </styled.div>
@@ -41,7 +41,7 @@ exports[`Search renders properly 1`] = `
         <styled.input
           name="score"
           onChange={[Function]}
-          type="text"
+          type="number"
           value=""
         />
       </styled.div>
@@ -50,16 +50,16 @@ exports[`Search renders properly 1`] = `
            Sort 
         </styled.label>
         <styled.input
+          disabled={true}
           name="sort"
-          onChange={[Function]}
           type="text"
-          value=""
+          value="votes"
         />
       </styled.div>
     </styled.div>
     <styled.div>
       <styled.button>
-        Buscar
+        Search
       </styled.button>
     </styled.div>
   </styled.form>

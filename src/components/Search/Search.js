@@ -19,7 +19,6 @@ const Search = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(queryArgs);
     handleQuerySubmit();
   };
 
@@ -41,7 +40,7 @@ const Search = props => {
           <InputGroup>
             <StyledLabel> Limit </StyledLabel>
             <StyledInput
-              type="text"
+              type="number"
               name="limit"
               onChange={handleInputChange}
               value={queryArgs.limit}
@@ -50,7 +49,7 @@ const Search = props => {
           <InputGroup>
             <StyledLabel> Score </StyledLabel>
             <StyledInput
-              type="text"
+              type="number"
               name="score"
               onChange={handleInputChange}
               value={queryArgs.score}
@@ -61,13 +60,15 @@ const Search = props => {
             <StyledInput
               type="text"
               name="sort"
-              onChange={handleInputChange}
-              value={queryArgs.sort}
+              // onChange={handleInputChange}
+              // value={queryArgs.sort}
+              value={"votes"}
+              disabled
             />
           </InputGroup>
         </InputListWrapper>
         <SubmitButtonWrapper>
-          <SubmitButton>Buscar</SubmitButton>
+          <SubmitButton>Search</SubmitButton>
         </SubmitButtonWrapper>
       </StyledForm>
     </Wrapper>
@@ -78,10 +79,10 @@ Search.propTypes = {
   handleInputChange: PropTypes.func.isRequired,
   handleQuerySubmit: PropTypes.func.isRequired,
   queryArgs: PropTypes.shape({
-    tags: PropTypes.string.isRequired,
     limit: PropTypes.string.isRequired,
     score: PropTypes.string.isRequired,
-    sort: PropTypes.string.isRequired
+    sort: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired
   })
 };
 
