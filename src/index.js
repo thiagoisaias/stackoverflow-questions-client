@@ -8,7 +8,7 @@ import "./assets/index.css";
 import App from "./components/App/App";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql"
+  uri: "http://stackoverflow-questions-server.herokuapp.com/graphql"
 });
 
 ReactDOM.render(
