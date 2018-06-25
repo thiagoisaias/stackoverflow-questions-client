@@ -21,7 +21,7 @@ const List = props => {
     <Wrapper>
       {list.length === 0 ? (
         <EmptyListMessage>
-          Nenhum resultado encontrado! Tente alterar os parâmetros de busca.
+          No results were found! Try to update search parameters.
         </EmptyListMessage>
       ) : (
         list
