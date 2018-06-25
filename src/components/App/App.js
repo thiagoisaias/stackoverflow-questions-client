@@ -42,7 +42,7 @@ class App extends Component {
         tags: "",
         limit: "",
         score: "",
-        sort: ""
+        sort: "votes"
       },
       isLoading: false,
       questionList: []
@@ -80,6 +80,7 @@ class App extends Component {
         this.setState({
           ...this.state,
           isLoading: false,
+          error: null,
           questionList: response.data.getQuestions
         });
       })
