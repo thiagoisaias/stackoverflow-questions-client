@@ -26,7 +26,7 @@ const Search = props => {
     <Wrapper>
       <Title>Stack Overflow</Title>
       <StyledForm onSubmit={handleSubmit}>
-        <Subtitle>Buscar na API</Subtitle>
+        <Subtitle>Questions API Search</Subtitle>
         <InputListWrapper>
           <InputGroup>
             <StyledLabel> Tags </StyledLabel>
