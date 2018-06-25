@@ -140,5 +140,6 @@ export const Tag = styled.div`
   @media ${devices.largeUp} {
     padding: 8px;
     font-size: 14px;
+    margin-top: 6px;
   }
 `;
