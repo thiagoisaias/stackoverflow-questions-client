@@ -48,7 +48,7 @@ exports[`Item renders properly 1`] = `
           src="http://someurl.com"
         />
         <span>
-          Asked 12'17 by Lorem
+          Asked Invalid date by Lorem
         </span>
       </styled.span>
     </styled.div>

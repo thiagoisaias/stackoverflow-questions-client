@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import moment from "moment";
 
 import {
   Wrapper,
@@ -38,7 +39,9 @@ const Item = props => {
           </TagList>
           <PostedBy>
             <ProfilePictureThumbnail src={user && user.profileImage} />
-            <span>{`Asked ${createdAt} by ${user && user.name}`}</span>
+            <span>{`Asked ${moment
+              .unix(createdAt)
+              .format("MMM D YYYY")} by ${user && user.name}`}</span>
           </PostedBy>
         </BottomInfoWrapper>
       </InfoWrapper>
